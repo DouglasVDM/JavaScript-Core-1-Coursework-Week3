@@ -17,15 +17,13 @@ var names = [
   "Ahmed",
 ];
 
-//function checks for string(name) longer than 7 letters.
+//function checks for string(name) longer than 7 letters and 1st starting letter A.
 function longerThanSeven(name) {
-  return name.length > 7;
+  return name.length > 7 && name[0] === "A";
 } 
 
 //using .find() method.
 let findLongNameThatStartsWithA = names.find(longerThanSeven); 
-
-//still need to find a way to check for string that starts with A
 
 var longNameThatStartsWithA = findLongNameThatStartsWithA;
 
