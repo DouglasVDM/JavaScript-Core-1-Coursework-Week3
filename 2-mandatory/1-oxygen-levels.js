@@ -11,7 +11,14 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(degrees) { //sort and find array methods.
+  if (degrees > "19.5%") {
+    return degrees;
+  } else if (degrees < "23.5%") {
+    return degrees;
+  }
+  return
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
