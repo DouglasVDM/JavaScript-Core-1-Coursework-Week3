@@ -15,6 +15,10 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 let nullValues = (element) => element === null;
 console.log(pairsByIndex.some(nullValues));
 
+let nullValuesExists = pairsByIndex.some(nullValues);
+if (nullValuesExists) {
+  process.exit(1);
+}
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
