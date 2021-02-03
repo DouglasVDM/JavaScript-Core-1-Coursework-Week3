@@ -14,7 +14,7 @@ let names = [
   "Arron Graham",
 ];
 
-names[0] = names[0].substring(0,6);
+names[0] = names[0].substring(0,names[0].indexOf(" "));
 names[1] = names[1].substring(0,8);
 names[2] = names[2].substring(0,5);
 names[3] = names[3].substring(0,5);
