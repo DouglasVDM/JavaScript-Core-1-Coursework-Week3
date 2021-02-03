@@ -8,7 +8,7 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex = pairsByIndexRaw.filter(arr => arr);
+var pairsByIndex = pairsByIndexRaw.filter(arr => Array.isArray(arr) && arr.length > 1 );
 //used .filter, but can't filter out the non pairs yet!(=>function that takes parameter of arr and returns it.)
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
