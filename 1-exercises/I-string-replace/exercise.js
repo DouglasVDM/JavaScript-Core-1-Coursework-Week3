@@ -13,14 +13,14 @@
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
 
-let result = story.replace("dogs", "cats");
-let result1 = result.replace("dogs", "cats");
-let result2 = result1.replace("day", "night");
-let result3 = result2.replace("day", "night");
+let catStory = story.replace(/dogs/g, "cats");
+let nightStory = catStory.replace(/day/g, "night");
+let totalCats = nightStory.replace(10, 100000);
+
+let result = totalCats; //story.replace(/dogs/g, "cats"|| /day/g, "night" || /10/g, 100000); 
 
 
-
-console.log(result3);
+console.log(result);
 
 
 
@@ -50,6 +50,6 @@ test(
 
 test(
   "2. The result of the replace is correct",
-  story,
+  result,
   "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night."
 );
