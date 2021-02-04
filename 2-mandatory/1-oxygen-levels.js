@@ -10,15 +10,24 @@
 
     Some string methods that might help you here are .replace() and .substring(). 
 */
-
+  // >19.5% && <23.5%
 function safeLevels(degrees) { //sort and find array methods.
-  if (degrees > "19.5%") {
-    return degrees;
-  } else if (degrees < "23.5%") {
-    return degrees;
+  let x = degrees.map(x => x.replace("%", ""));
+  function isSafeLevel(el) {
+    // let d = denver > 19.5 && denver < 23.5;
+    return el > 19.5 && el < 23.5;
   }
-  return
+  let y = x.find(el => el > 19.5 && el < 23.5) ;
+  // let y = x.find(el => isSafeLevel(el));
+
+  return `${y}%`; //Denver Special!!!
 }
+  
+  // } else if (degrees < "23.5%") {
+  //   return degrees;
+  // }
+  // return
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
