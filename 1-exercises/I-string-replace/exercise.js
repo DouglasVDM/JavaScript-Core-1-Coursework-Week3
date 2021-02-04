@@ -16,8 +16,9 @@ let story =
 let catStory = story.replace(/dogs/g, "cats");
 let nightStory = catStory.replace(/day/g, "night");
 let totalCats = nightStory.replace(10, 100000);
+let greatToBrilliant = totalCats.replace("great", "brilliant");
 
-let result = totalCats; //story.replace(/dogs/g, "cats"|| /day/g, "night" || /10/g, 100000); 
+let result = greatToBrilliant; //story.replace(/dogs/g, "cats"|| /day/g, "night" || /10/g, 100000); 
 
 
 console.log(result);
