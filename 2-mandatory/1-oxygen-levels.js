@@ -10,25 +10,17 @@
 
     Some string methods that might help you here are .replace() and .substring(). 
 */
-  // >19.5% && <23.5%
-function safeLevels(degrees) { //sort and find array methods.
-  let x = degrees.map(x => x.replace("%", ""));
-  function isSafeLevel(el) {
-    // let d = denver > 19.5 && denver < 23.5;
-    return el > 19.5 && el < 23.5;
-  }
-  let y = x.find(el => el > 19.5 && el < 23.5) ;
-  // let y = x.find(el => isSafeLevel(el));
 
-  return `${y}%`; //Denver Special!!!
+function safeLevels(degrees) { 
+  let x = degrees.map(x => x.replace("%", ""));   //removed % sign.
+  function isSafeLevel(el) {                      //finction to check for safe levels.
+      return el > 19.5 && el < 23.5;
+  }
+  let y = x.find(el => isSafeLevel(el));  //variable to use in return statement to print out 1st value that is true in array.
+
+  return `${y}%`; //Denver TA Special!!! add % to the match found in variable y.
 }
   
-  // } else if (degrees < "23.5%") {
-  //   return degrees;
-  // }
-  // return
-
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
