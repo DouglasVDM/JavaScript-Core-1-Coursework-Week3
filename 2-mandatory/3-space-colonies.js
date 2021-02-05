@@ -15,7 +15,20 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  function aFamily(el) {    
+    let family = el.includes("family") && el.includes("A");    
+    /*  .includes() method determines whether a string contains the characters of a specified string.
+    This method returns true if the string contains the characters, and false if not.
+    Note: The includes() method is case sensitive.  */
+    return family;
+  }
+
+  let result = arr.filter(aFamily)
+  /*  .filter() Runs every item in the array through a condition that we set,
+   and returns a new array with the values that match the condition.  */
+  return result;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
