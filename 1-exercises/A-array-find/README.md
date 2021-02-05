@@ -1,4 +1,4 @@
-Imagine you have an array of names:
+chImagine you have an array of names:
 
 ```js
 var names = ["Daniel", "James", "Irina", "Mozafar", "Ashleigh"];

@@ -13,12 +13,12 @@
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
 
-let result = story.replace("I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.", "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night.");
-// let nightStory = catStory.replace(/day/g, "night");
-// let totalCats = nightStory.replace(10, 100000);
-// let greatToBrilliant = totalCats.replace("great", "brilliant");
+let catStory = story.replace(/dogs/g, "cats");
+let nightStory = catStory.replace(/day/g, "night");
+let totalCats = nightStory.replace(10, 100000);
+let greatToBrilliant = totalCats.replace("great", "brilliant");
 
-// let result = greatToBrilliant; //story.replace(/dogs/g, "cats"|| /day/g, "night" || /10/g, 100000); 
+let result = greatToBrilliant; //story.replace(/dogs/g, "cats"|| /day/g, "night" || /10/g, 100000); 
 
 
 console.log(result);
