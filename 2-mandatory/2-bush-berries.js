@@ -22,10 +22,8 @@
 */
 
 function bushChecker(arr) {
-  function safeBush(el) {
-    return el === "pink";
-  }  
-  let result = arr.every(safeBush);
+  
+  let result = arr.every(el => el === "pink");  //changed to arrow function.
 
   if (result === true) {
     return "Bush is safe to eat from"
