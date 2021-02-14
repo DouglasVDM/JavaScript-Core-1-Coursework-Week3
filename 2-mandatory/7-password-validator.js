@@ -23,8 +23,24 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+  let specialSymbols = /[!#$%.*&]/;
+  let uppercaseLetter = /[A-Z]/;
+  let lowerCaseLetter = /[a-z]/;
+  let numbers = /[0-9]/;
+  
+  return passwords.map((elem) => {
+    return (elem.length > 4 //- Have at least 5 characters.
+      && uppercaseLetter.test(elem) //- Have at least one English uppercase letter (A-Z)
+      && lowerCaseLetter.test(elem) //- Have at least one English lowercase letter (a-z)
+      && numbers.test(elem) //- Have at least one number (0-9)
+      && specialSymbols.test(elem) //- Have at least one non-alphanumeic symbol
+    );
+  });
 }
+/*
+  The test() method tests for a match in a string.
+  This method returns true if it finds a match, otherwise it returns false.
+*/
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -55,3 +71,15 @@ test(
   validatePasswords(passwords2),
   [true, true, false, false, false]
 );
+
+// return passwords.map((password, index) => {
+//     return (
+//       passwords.indexOf(password) === index &&
+//       password.length >= 5 &&
+//       /[A-Z]/.test(password) &&
+//       /[a-z]/.test(password) &&
+//       /[0-9]/.test(password) &&
+//       /[!#$%.*&]/.test(password)
+//     );
+//   });
+// }	
