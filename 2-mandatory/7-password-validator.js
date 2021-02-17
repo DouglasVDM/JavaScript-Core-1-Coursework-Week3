@@ -28,15 +28,18 @@ function validatePasswords(passwords) {
   let lowerCaseLetter = /[a-z]/;
   let numbers = /[0-9]/;
   
-  return passwords.map((elem) => {
-    return (elem.length > 4 //- Have at least 5 characters.
-      && uppercaseLetter.test(elem) //- Have at least one English uppercase letter (A-Z)
-      && lowerCaseLetter.test(elem) //- Have at least one English lowercase letter (a-z)
-      && numbers.test(elem) //- Have at least one number (0-9)
-      && specialSymbols.test(elem) //- Have at least one non-alphanumeic symbol
-    );
-  });
+  return passwords.map(fun    ction (element, index, array) {
+      return (element.length  > 4           //- Have at least 5 characters.
+        && uppercaseLetter.test(element)    //- Have at least one English uppercase letter (A-Z)
+        && lowerCaseLetter.test(element)    //- Have at least one English lowercase letter (a-z)
+        && numbers.test(element)            //- Have at least one number (0-9)
+        && specialSymbols.test(element)     //- Have at least one non-alphanumeic symbol
+        && array.indexOf(element) === index //- Check the array for the index of the element and must be equal to the actual index. =true
+      );
+    });
 }
+
+// indexOf(element)
 /*
   The test() method tests for a match in a string.
   This method returns true if it finds a match, otherwise it returns false.
