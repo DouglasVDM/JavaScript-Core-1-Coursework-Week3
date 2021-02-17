@@ -127,14 +127,20 @@ function getLocationName(arr) {
    
   Advanced challange: try to use arrow function when invoking an array method.
 */
-function journeyPlanner(locations, transportMode) {  
-  // let specificTransport = locations.includes(transportMode)
-  // console.log(`This result is ${specificTransport}`)
-  
-  // console.log(`This result is ${locations.slice()}`)
-  console.log(`This map result is ${locations.map(el => el[0])}`)  
-  // Implement the function body
+function journeyPlanner(locations, transportMode) {
+  return locations.filter(function (places) {
+      return places.slice(1).includes(transportMode);
+    }).map(function (index) {
+      return index[0];
+    });  
 }
+/*  
+  The slice() method extracts parts of a string and returns the extracted parts in a new string 
+  The includes() method determines whether a string contains the characters of a specified string.
+  The map() method creates a new array with the results of calling a function for every array element.
+  Method chaining happens when you want to call multiple functions using the same object and its reference.
+*/
+  
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
