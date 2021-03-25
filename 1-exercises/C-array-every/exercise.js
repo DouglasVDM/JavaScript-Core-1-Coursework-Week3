@@ -6,7 +6,7 @@ var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
 let inStudents = (item) => {
-  console.log(item);
+  // console.log('this is the item', item);
  return students.includes(item);
 }
 
